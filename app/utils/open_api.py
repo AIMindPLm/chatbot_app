@@ -124,7 +124,7 @@ def get_chat_response(prompt, messages):
     messages.append({"role": "user", "content": prompt})
 
     response = call_openai_function_calling(messages, tools)
-    print("API Response:", response)  # Debugging output
+    print("API Response:", response) 
     response_message = response.choices[0].message
     messages.append(response_message)
     print("Response Message:", response_message)
